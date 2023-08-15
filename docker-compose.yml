@@ -1,0 +1,6 @@
+version: "3"
+services:
+  hourly-notification-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
