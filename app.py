@@ -4,7 +4,7 @@ import requests
 from datetime import datetime
 
 topic = os.getenv("NOTIFY_TOPIC")
-interval = os.getenv("NOTIFY_INTERVAL", 60)
+interval = int(os.getenv("NOTIFY_INTERVAL", 60))
 
 if topic:
     while True:
