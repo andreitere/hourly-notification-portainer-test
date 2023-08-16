@@ -4,6 +4,7 @@ import requests
 from datetime import datetime
 
 topic = os.getenv("NOTIFY_TOPIC")
+interval = os.getenv("NOTIFY_INTERVAL", 60)
 
 if topic:
     while True:
@@ -20,6 +21,6 @@ if topic:
         else:
             print("Failed to send notification.")
 
-        time.sleep(3600)  # Sleep for an hour
+        time.sleep(interval)  # Sleep for an hour
 else:
     print("NOTIFY_TOPIC environment variable is not set. Notification will not be sent.")

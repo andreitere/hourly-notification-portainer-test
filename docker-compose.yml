@@ -6,3 +6,4 @@ services:
       dockerfile: Dockerfile
     environment:
       NOTIFY_TOPIC: ${NOTIFY_TOPIC}
+      NOTIFY_INTERVAL: ${NOTIFY_INTERVAL}
