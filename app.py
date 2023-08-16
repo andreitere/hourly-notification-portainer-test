@@ -19,6 +19,8 @@ def send_notification(topic):
     else:
         print("Failed to send notification.")
 
+def health_log():
+    print("Service is running...")
 
 def main():
     topic = os.getenv("NOTIFY_TOPIC")
@@ -30,6 +32,7 @@ def main():
     scheduler = BlockingScheduler()
     # Schedule the job using a cron expression (e.g., every hour)
     scheduler.add_job(send_notification, 'cron', args=[topic], hour='*')
+    scheduler.add_job(health_log, 'interval', args=[topic], minutes=5)
 
     try:
         scheduler.start()

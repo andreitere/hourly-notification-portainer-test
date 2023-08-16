@@ -1,7 +1,7 @@
 version: "3"
 services:
   hourly-notification-app:
-    image: hourly-notif:4
+    image: hourly-notif:5
     build:
       context: .
       dockerfile: Dockerfile
