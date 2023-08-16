@@ -1,10 +1,8 @@
 FROM python:3.9
 
-RUN pip install requests
+RUN pip install requests apscheduler
 
 WORKDIR /app
-
-ENV VERSION=2
 
 COPY app.py .
 
