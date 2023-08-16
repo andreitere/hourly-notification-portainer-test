@@ -1,10 +1,10 @@
 version: "3"
 services:
   hourly-notification-app:
-    image: hourly-notification-app:2
     build:
       context: .
       dockerfile: Dockerfile
+    pull_policy: never
     environment:
       NOTIFY_TOPIC: ${NOTIFY_TOPIC}
       NOTIFY_INTERVAL: ${NOTIFY_INTERVAL}
